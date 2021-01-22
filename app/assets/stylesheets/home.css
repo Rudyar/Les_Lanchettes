@@ -1,7 +1,7 @@
 .bgimage {
   width:100%;
   height:100vh;
-  background-image: url(neige.jpg);
+  background-image: url("home/jumbo.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size:cover;
@@ -16,9 +16,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
-.container {
-  margin-top: 5em;
+
+.washing-machine {
+  width: 50px;
+  height: 50px;
 }
+
 h2 {
   text-align: center;
 }

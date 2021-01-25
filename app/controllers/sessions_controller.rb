@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       flash[:notice] = "Salut Katherine"
       redirect_to kath_root_path
     else
-      flash[:danger] = "Dommage"
+      flash[:error] = "Dommage"
       render :new
     end
 

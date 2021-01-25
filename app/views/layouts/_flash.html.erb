@@ -1,8 +1,5 @@
 <% flash.each do |type, msg| %>
-  <div class="alert alert-<%= bootstrap_class_for_flash(type) %> alert-dismissible fade show" role="alert">
+  <div class="text-center alert alert-<%= type %> mx-auto my-1" role="alert" style="width: 60vw;">
     <%= msg %>
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
   </div>
 <% end %>

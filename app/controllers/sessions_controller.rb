@@ -8,18 +8,16 @@ class SessionsController < ApplicationController
 
     if @user && @user.authenticate(params[:session][:password])
       log_in(@user)
-      flash[:notice] = "Salut Katherine"
-      redirect_to kath_root_path
+      redirect_to kath_root_path, success: "Salut Katherine !"
     else
-      flash[:error] = "Dommage"
-      render :new
+      redirect_to new_session_path, danger: "Dommage"
     end
 
   end
 
   def destroy
     session.delete(:user_id)
-    redirect_to root_path
+    redirect_to root_path, info: "Déconnecté"
 
   end
 end

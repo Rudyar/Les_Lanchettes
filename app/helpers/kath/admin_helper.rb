@@ -1,0 +1,2 @@
+module Kath::AdminHelper
+end

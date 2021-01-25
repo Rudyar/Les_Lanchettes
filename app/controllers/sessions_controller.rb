@@ -4,19 +4,21 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by_email(params[:email])
-    if user && user.authenticate(params[:password])
-      session[:user_id] = user.id
-      redirect_to root_path
+    @user = User.find_by(email: params[:session][:email])
 
+    if @user && @user.authenticate(params[:session][:password])
+      log_in(@user)
+      flash[:notice] = "Salut Katherine"
+      redirect_to kath_root_path
     else
-      redirect_to root_path
+      flash[:danger] = "Dommage"
+      render :new
     end
 
   end
 
   def destroy
-    session[:user_id] = nil
+    session.delete(:user_id)
     redirect_to root_path
 
   end

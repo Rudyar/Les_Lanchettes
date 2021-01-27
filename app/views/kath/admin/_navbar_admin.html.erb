@@ -1,0 +1,6 @@
+<nav class="navbar navbar-light bg-light d-flex">
+  <%= link_to "Voir le site", root_path, class: "btn btn-outline-success" %>
+<%= link_to "Ajouter une periode", new_kath_period_path, class: "btn btn-outline-success" %>
+  <h1 class="ml-auto">Editer les disponibilitées</h1>
+  <%= link_to "Déconnexion", session_path(session.id), class: "btn btn-outline-danger ml-auto", method:'DELETE' %>
+</nav>

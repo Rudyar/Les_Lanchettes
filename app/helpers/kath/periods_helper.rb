@@ -1,0 +1,2 @@
+module Kath::PeriodsHelper
+end

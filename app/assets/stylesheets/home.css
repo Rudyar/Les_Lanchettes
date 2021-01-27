@@ -22,9 +22,6 @@ body {
   height: 50px;
 }
 
-h2 {
-  text-align: center;
-}
 table {
   background-color: #fff;
   box-shadow: 1px 1px 5px #888888;
@@ -51,9 +48,6 @@ thead>tr>th {
   border-left:0px !important;
   padding: 1.5em 1em !important;
 }
-tr:hover{
-  cursor: pointer;
-}
 
 @media screen and (max-width: 767px) {
   table caption {
@@ -61,15 +55,6 @@ tr:hover{
   }
 }
 
-.btn-success {
-  background-color: #46A137;
-  padding: 2px;
-}
-
-.btn-danger {
-  background-color:#DC3D30;
-  padding: 2px;
-}
 
 .map-container{
   overflow:hidden;

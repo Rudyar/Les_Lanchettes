@@ -39,6 +39,19 @@ class Kath::PeriodsController < ApplicationController
     end
   end
 
+  def destroy
+    @period = Period.find(params[:id])
+    if @period.destroy
+      flash[:info] = "Période supprimée"
+      redirect_to kath_root_path
+    else
+      flash[:danger] = "Impossible de supprimer cette période"
+      render :edit
+    end
+
+      
+  end
+
   private
 
   def period_params

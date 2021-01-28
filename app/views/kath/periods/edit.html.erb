@@ -7,9 +7,10 @@
       <%= f.label :title %>
       <%= f.text_field :title, class: 'form-control' %>
 
-      <%= f.submit "Modifier la période", class: " mt-2 btn btn-primary" %>
+      <%= f.submit "Modifier la période", class: " mt-2 btn btn-success" %>
 
   <% end %>
 </div>
 
-<%= link_to "Accueil admin", kath_root_path, class: "btn btn-success" %>
+<%= link_to "Supprimer cette période", kath_period_path(@period.id), class: "mx-2 text-danger btn btn-outline-danger", method: :delete, data: {confirm: "T'es sûr ? Toutes les semaine seront aussi supprimées !"} %>
+<%= link_to "Accueil admin", kath_root_path, class: "btn btn-info" %>

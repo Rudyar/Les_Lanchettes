@@ -1,0 +1,15 @@
+<div class="container text-center w-50">
+  <h2 class="text-center p-3">Modifier la période</h2>
+
+  <%= form_with(model: [:kath, @period], local: true) do |f| %>
+
+    <div class="form-group">
+      <%= f.label :title %>
+      <%= f.text_field :title, class: 'form-control' %>
+
+      <%= f.submit "Modifier la période", class: " mt-2 btn btn-primary" %>
+
+  <% end %>
+</div>
+
+<%= link_to "Accueil admin", kath_root_path, class: "btn btn-success" %>

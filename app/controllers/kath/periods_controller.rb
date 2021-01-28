@@ -20,6 +20,24 @@ class Kath::PeriodsController < ApplicationController
       render :new
     end
   end
+  
+  def edit
+    @period = Period.find(params[:id])
+  end
+  
+  def update
+    @period = Period.find(params[:id])
+    
+    if @period.update(period_params)
+      flash[:success] = "Période modifiée"
+      redirect_to kath_root_path
+
+    else
+      flash[:danger] = "Impossible de modifier la période"
+      render :new
+
+    end
+  end
 
   private
 

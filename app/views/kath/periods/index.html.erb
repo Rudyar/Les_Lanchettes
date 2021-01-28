@@ -1,7 +1,10 @@
 <% @periods.each do |period| %>
   <div class="col-md-10 m-auto">
     <div class="table-responsive">
-      <h3 class="text-center"><%= period.title %></h3>
+      <h3 class="text-center"><%= period.title %> <%= link_to edit_kath_period_path(period.id), title: "Modifier le titre de la période" do %>
+      <i class="fas fa-1x fa-pencil-alt"></i>
+      </h3>
+      <% end %>
       <table class="table table-bordered table-hover">
         <thead>
           <tr>
@@ -13,7 +16,7 @@
         <tbody>
           <tr>
             <td>12/12/2021</td>
-            <td>12 €<Issue</span></td>
+            <td>12 €</span></td>
             <td><span class="btn btn-success">Oui</span></td>
           </tr>
         </tbody>   

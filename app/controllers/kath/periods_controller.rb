@@ -3,6 +3,7 @@ class Kath::PeriodsController < ApplicationController
 
   def index
     @periods = Period.all
+    @availabilities = Availability.all
   end
 
   def new

@@ -1,0 +1,14 @@
+<% @availabilities.each do |availability|%>
+  <tbody>
+    <tr>
+      <td><%= availability.date %></td>
+      <td><%= availability.price %></span></td>
+      <% if availability.available == true %>
+        <td><span class="btn btn-success">Oui</span></td>
+      <% else %>
+        <td><span class="btn btn-danger">Non</span></td>
+      <% end %>
+    </tr>
+  </tbody>
+
+<% end %>

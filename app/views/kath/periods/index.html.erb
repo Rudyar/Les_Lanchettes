@@ -13,13 +13,10 @@
             <th>Disponible ? </th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>12/12/2021</td>
-            <td>12 €</span></td>
-            <td><span class="btn btn-success">Oui</span></td>
-          </tr>
-        </tbody>   
+        <% if @availabilities %>
+          <%= render template: "kath/availabilities/index" %>
+        <% end %>
+
       </table>
     </div>
   </div>

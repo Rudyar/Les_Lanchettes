@@ -1,0 +1,21 @@
+<div class="container text-center w-50">
+  <h2 class="text-center p-3">Ajouter une nouvelle semaine de disponibilité</h2>
+
+  <%= form_with(model: [:kath, @availability], local: true) do |f| %>
+
+    <div class="form-group">
+      <%= f.label :date %>
+      <%= f.date_field :date, class: "form-control" %>
+      
+      <%= f.label :price %>
+      <%= f.number_field (:price, min= '1'), class: "form-control" %>
+
+      <%= f.label :date %>
+      <%= f.date_field :date, class: "form-control" %>
+
+      <%= f.submit "Ajouter une nouvelle semaine", class: " mt-2 btn btn-success" %>
+
+  <% end %>
+</div>
+
+<%= link_to "Accueil admin", kath_root_path, class: "btn btn-info" %>

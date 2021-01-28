@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   namespace :kath do
     root 'admin#index'
     resources :periods
+    resources :availabilities
   end
 end

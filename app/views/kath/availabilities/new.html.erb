@@ -4,14 +4,14 @@
   <%= form_with(model: [:kath, @availability], local: true) do |f| %>
 
     <div class="form-group">
-      <%= f.label :date %>
-      <%= f.date_field :date, class: "form-control" %>
+      <%= f.label :date_de_début_de_semaine %>
+      <%= f.datetime_field :date, class: "form-control" %>
       
-      <%= f.label :price %>
-      <%= f.number_field (:price, min= '1'), class: "form-control" %>
+      <%= f.label :prix_de_la_semaine %>
+      <%= f.number_field :price, min: 1, step: 1, class: "form-control" %>
 
-      <%= f.label :date %>
-      <%= f.date_field :date, class: "form-control" %>
+      <%= f.label :periode_concernée %>
+      <%= f.collection_select :period_id, Period.all, :id, :title, class:"form-control" %>
 
       <%= f.submit "Ajouter une nouvelle semaine", class: " mt-2 btn btn-success" %>
 

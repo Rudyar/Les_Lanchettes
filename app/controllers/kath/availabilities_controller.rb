@@ -10,15 +10,16 @@ class Kath::AvailabilitiesController < ApplicationController
   end
   
   def create
-    # ne pas oublier le period_id!
-    @availability = aAailability.new(availability_params)
+    @availability = Availability.new(availability_params)
+    @availability.period_id = Period.find(2)
+    @availability.available = false
 
     if @availability.save
       flash[:success] = "Semaine créée"
       redirect_to kath_root_path
     else
       flash[:danger] = "Impossible de créer la semaine"
-      render :new
+      render new_kath_availability_path
     end
   end
   

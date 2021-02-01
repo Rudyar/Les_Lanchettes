@@ -2,7 +2,6 @@ class Kath::AvailabilitiesController < ApplicationController
   before_action :authenticate_user
 
   def index
-    @availabilities = Availability.all
   end
 
   def new

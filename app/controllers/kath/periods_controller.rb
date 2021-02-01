@@ -2,8 +2,7 @@ class Kath::PeriodsController < ApplicationController
   before_action :authenticate_user
 
   def index
-    @periods = Period.all
-    @availabilities = Availability.all
+
   end
 
   def new

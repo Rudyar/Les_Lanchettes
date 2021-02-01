@@ -1,2 +1,6 @@
 <%= render "navbar_admin" %>
-<%= render template: "kath/periods/index" %>
+<% if @periods %>
+  <%= render template: "kath/periods/index" %>
+<% else %>
+  <h2> Il n'y aucunes période de créées.</h2>
+<% end %>

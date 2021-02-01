@@ -1,23 +1,25 @@
 <% @periods.each do |period| %>
-  <div class="col-md-10 m-auto">
-    <div class="table-responsive">
-      <h3 class="text-center"><%= period.title %> <%= link_to edit_kath_period_path(period.id), title: "Modifier le titre de la période", class: "text-danger" do %>
-      <i class="fas fa-1x fa-pencil-alt mx-2"></i>
-      </h3>
-      <% end %>
-      <table class="table table-bordered table-hover">
-        <thead>
-          <tr>
-            <th>Date d'arrivée</th>
-            <th>Prix / Semaine</th>
-            <th>Disponible ? </th>
-          </tr>
-        </thead>
-        <% if @availabilities %>
-          <%= render template: "kath/availabilities/index" %>
+  <% @availabilities = Availability.where(period_id: period.id) %> <%# Bad practice, but it's the only solution I've found %>
+    <div class="col-md-10 mx-auto my-5">
+      <div class="table-responsive">
+        <h3 class="text-center"><%= period.title %> <%= link_to edit_kath_period_path(period.id), title: "Modifier le titre de la période", class: "text-danger" do %>
+        <i class="fas fa-1x fa-pencil-alt mx-2"></i>
+        </h3>
         <% end %>
+        <table class="table table-bordered table-hover text-center">
+          <thead>
+            <tr>
+              <th>Date d'arrivée</th>
+              <th>Prix / Semaine</th>
+              <th>Disponible ? </th>
+              <th>Actions </th>
+            </tr>
+          </thead>
+          <% if @availabilities %>
+            <%= render template: "kath/availabilities/index" %>
+          <% end %>
 
-      </table>
+        </table>
+      </div>
     </div>
-  </div>
 <% end %>

@@ -35,9 +35,6 @@ thead {
   color: antiquewhite;
 }
 
-tbody>tr{
-  text-align: center;
-}
 tbody>tr>td {
   border-right: 0px !important;
   border-left:0px !important;

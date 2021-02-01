@@ -1,5 +1,6 @@
 class Availability < ApplicationRecord
-  validates_presence_of :date, :available
+  validates_inclusion_of :available, in: [true, false]
+  validates_presence_of :date
   validates :price,
             presence: true,
             numericality: { greater_than_or_equal_to: 1 }

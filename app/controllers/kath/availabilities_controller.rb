@@ -11,7 +11,6 @@ class Kath::AvailabilitiesController < ApplicationController
   
   def create
     @availability = Availability.new(availability_params)
-    @availability.period_id = Period.find(2)
     @availability.available = false
 
     if @availability.save
@@ -57,6 +56,6 @@ class Kath::AvailabilitiesController < ApplicationController
   private
 
   def availability_params
-    params.require(:availability).permit(:date, :price, :available)
+    params.require(:availability).permit(:date, :price, :available, :period_id)
   end
 end

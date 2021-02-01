@@ -8,7 +8,13 @@
       <% else %>
         <td><span class="btn btn-danger">Non</span></td>
       <% end %>
-      <td> salut</td>
+      <td>
+        <%= link_to edit_kath_availability_path(availability.id), title: "Modifier la semaine", class: "text-secondary" do %>
+          <i class="fas fa-2x fa-pencil-alt mx-1"></i></h3>
+        <% end %>
+        <%= link_to kath_availability_path(availability.id), class: "mx-2 text-danger", title:"Supprimer la semaine", method: :delete, remote: true, data: {confirm: "Es-tu sûr(e) de vouloir supprimer cette semaine ?"}  do %>
+          <i class="fas fa-times fa-2x"></i>
+        <% end %></td>
     </tr>
   </tbody>
 

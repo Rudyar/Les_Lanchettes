@@ -53,7 +53,10 @@ class Kath::AvailabilitiesController < ApplicationController
   def toggle_availability_state
     @availability = Availability.find(params[:id])
     if @availability.toggle(:available).save
-      redirect_to kath_root_path
+      respond_to do |format|
+        format.html { redirect_to kath_root_path }
+        format.js { }
+      end
     else
       flash[:danger] = "Impossible de réserver cette période"
       redirect_to kath_root_path

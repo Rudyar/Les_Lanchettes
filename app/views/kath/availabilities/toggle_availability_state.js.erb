@@ -1,0 +1,10 @@
+if (document.getElementById(<%= @availability.id %>).classList.contains('btn-success')){
+  document.getElementById(<%= @availability.id %>).classList.remove('btn-success');
+  document.getElementById(<%= @availability.id %>).classList.add('btn-danger');
+  document.getElementById(<%= @availability.id %>).innerHTML = "Non";
+
+  } else {
+  document.getElementById(<%= @availability.id %>).classList.remove('btn-danger');
+  document.getElementById(<%= @availability.id %>).classList.add('btn-success');
+  document.getElementById(<%= @availability.id %>).innerHTML = "Oui";
+}

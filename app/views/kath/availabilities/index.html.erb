@@ -4,9 +4,9 @@
       <td><%= availability.date.strftime('%d/%m/%Y') %></td>
       <td><%= availability.price %> €</span></td>
       <% if availability.available == true %>
-        <td><span class="btn btn-success">Oui</span></td>
+        <td><%= button_to "Oui", kath_availabilities_toggle_availability_state_path(id: availability.id), method: 'post', class: 'btn btn-success' %></td>
       <% else %>
-        <td><span class="btn btn-danger">Non</span></td>
+        <td><%= button_to "Non", kath_availabilities_toggle_availability_state_path(id: availability.id), method: 'post', class: 'btn btn-danger' %></td>
       <% end %>
       <td>
         <%= link_to edit_kath_availability_path(availability.id), title: "Modifier la semaine", class: "text-secondary" do %>

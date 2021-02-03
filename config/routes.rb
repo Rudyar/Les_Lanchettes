@@ -10,5 +10,6 @@ Rails.application.routes.draw do
     root 'admin#index'
     resources :periods
     resources :availabilities
+    post "availabilities/toggle_availability_state" => "availabilities#toggle_availability_state"
   end
 end

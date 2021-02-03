@@ -48,8 +48,16 @@ class Kath::AvailabilitiesController < ApplicationController
       flash[:danger] = "Impossible de supprimer cette période"
       render :edit
     end
+  end
 
-      
+  def toggle_availability_state
+    @availability = Availability.find(params[:id])
+    if @availability.toggle(:available).save
+      redirect_to kath_root_path
+    else
+      flash[:danger] = "Impossible de réserver cette période"
+      redirect_to kath_root_path
+    end
   end
 
   private

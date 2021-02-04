@@ -1,0 +1,2 @@
+module Kath::ContractsHelper
+end

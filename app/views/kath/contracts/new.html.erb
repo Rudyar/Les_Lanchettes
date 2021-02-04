@@ -1,0 +1,34 @@
+<div class="container text-center w-50">
+  <h2 class="text-center p-3">Créer un contrat</h2>
+
+  <%= form_with(model: [:kath, @contract], local: true) do |f| %>
+
+    <div class="form-group">
+      <%= f.label :nom %>
+      <%= f.text_field :last_name, class: "form-control" %>
+      
+      <%= f.label :prénom %>
+      <%= f.text_field :first_name, class: "form-control" %>
+
+      <%= f.label :email %>
+      <%= f.text_field :email, class: "form-control" %>
+
+      <%= f.label :adresse %>
+      <%= f.text_field :address, class: "form-control" %>
+
+      <%= f.label :numéro_de_téléphone %>
+      <%= f.text_field :phone_number, class: "form-control" %>
+
+      <%= f.label :durée_du_séjour %>
+      <%= f.text_field :duration, class: "form-control" %>
+            
+      <%= f.label :prix_du_séjour %>
+      <%= f.number_field :price, min: 1, step: 1, class: "form-control" %>
+
+
+      <%= f.submit "Créer le contrat", class: " mt-2 btn btn-success" %>
+
+  <% end %>
+</div>
+
+<%= link_to "Accueil admin", kath_root_path, class: "btn btn-info" %>

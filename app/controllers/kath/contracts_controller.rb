@@ -14,7 +14,7 @@ class Kath::ContractsController < ApplicationController
 
     if @contract.save
       flash[:success] = "Contrat créé"
-      redirect_to kath_contract_path(@contract.id)
+      redirect_to kath_contract_path(@contract.id, format: :pdf)
     else
       flash[:danger] = "Impossible de créer le contract"
       render :new
@@ -23,6 +23,14 @@ class Kath::ContractsController < ApplicationController
 
   def show
     @contract = Contract.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render template: 'kath/contracts/show', 
+              pdf: "contrat_" + @contract.last_name.upcase
+      end
+    end
+
   end
 
   private

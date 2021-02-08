@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chalet Les Lanchettes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" href="https://878580.smushcdn.com/761978/wp-content/uploads/2017/06/house-favicon-300x300.png?lossy=1&strip=1&webp=1">
+
+<!-- CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  </head>
+
+  <body>
+    <div class="container">
+  <h1 class="text-center"><u>CONTRAT DE LOCATION</u></h1>
+  <div class="border border-dark p-2 m-2">
+    <p class="m-1"><u>Propriétaire</u>: RUFFIER LANCHE Katherine</p>
+    <p class="m-1"><u>Adresse</u>: Les Lanchettes, Côte Arbet, 73350 CHAMPAGNY EN VANOISE</p>
+    <p class="m-1"><u>Téléphone portable</u>: <b class="text-danger">06 81 55 91 35</b></p>
+    <p class="m-1"><u>Email</u>: <span class="text-primary">leslanchettes@wanadoo.fr</span></p>
+  </div>
+
+  <div class="border border-dark p-2 m-2">
+    <p class="m-1"><u>Locataire</u>: <%= @contract.last_name.upcase + " " + @contract.first_name.capitalize %></p>
+    <p class="m-1"><%= @contract.address %></p>
+    <p class="m-1"><u>Téléphone portable </u>: <%= @contract.phone_number %></p>
+    <p class="m-1"><u>Email</u>: <span class="text-primary"><%= @contract.email %></span></p>
+  </div>
+
+  <div class="border border-danger p-2 m-2">
+    <p class="m-1">Objet du contrat : LOCATION APPARTMEENT 2 PIÈCES 3 PERSONNES - 38m²</p>
+    <p class="m-1">Classé *** Meublé Tourisme - Classé *** Cristaux Paradiski - Gite de France n° 071229</p>
+    <p class="m-1"><u>Durée de la location</u>: <span class="text-danger"><%= @contract.duration %></span></p>
+    <p class="m-1"><u>Prix du séjour</u>: <span class="text-danger"><%= @contract.price %> €</span></p>
+    <p class="m-1 text-danger">Accomptes à verser à la signature du contrat : 200 € (virement - chèque - chèques vacances)</p>
+    <p class="m-1">(Toutes charges comprises : eau, électricité, chauffage, wifi)</p>
+    <hr>
+    <p class="m-1"><u>Banque</u>: Crédit Agricole des Savoie, 73350 BOZEL</p>
+    <p class="m-1"><u>IBAN</u>: FR76 1810 6008 1091 4269 3605 058</p>
+    <p class="m-1"><u>Code Swift</u>: AGRIFRPP881 </p>
+  </div>
+
+  <div class="border border-dark p-2 m-2">
+    <p class="m-1"><u>En supplément</u>:</p>
+    <ul class="m-1">
+      <li class="m-1">Taxe de séjour: 1,65 € par adultes et par jour</li>
+      <li class="m-1">Ménage en fin de séjour : 50 €</li>
+      <li class="m-1"> Location de linge de lit : 12 € la paire avec la taie</li>
+    </ul>
+  </div>
+
+  <div class="border border-dark p-2 m-2">
+    <p class="m-1"><u>Nbs de personnes occupant le logement</u>: .... Adultes, .... Enfants </p>
+    <p class="m-1"><u>Caution</u>: 500 €, à régler à l’arrivée, en plus du solde du loyer 
+      Elle vous sera remboursée le jour de votre départ, déduction faite des éventuelles 
+      détériorations ou du coût de  remise en état des lieux ou du ménage non effectué.
+    </p>
+  </div>
+
+  <div class="border border-danger p-2 m-2" style="display: -webkit-box; display: -webkit-flex; display: flex;">
+    <div>
+      <p class="m-1">Fait à CHAMPAGNY le 04/01/2021</p>
+      <p class="m-1">La propriétaire</p>
+      <span class="ml-5"><%= image_tag image_url ("home/signature_kath.png") %></span><br><br>
+    </div>
+
+    <div class="text-right">
+      <p class="m-1">Fait à .............................................................</p>
+      <p>le .................................</p>
+      <p class="m-1">Le locataire (faire précéder la signature de "lu et approuvé")</p><br><br>
+    </div>
+  </div>
+
+</div>
+
+  </body>
+</html>
+
+
+
+

@@ -1,2 +1,5 @@
-<h1>Kath::Contracts#index</h1>
-<p>Find me in app/views/kath/contracts/index.html.erb</p>
+<% @contracts.each do |c| %>
+  <%= c.first_name %>
+  <%= link_to "voir le contrat", kath_contract_path(c.id, format: :pdf), class:"btn btn-info" %>
+<% end %>
+<%= link_to "Accueil", kath_root_path, class:"btn btn-warning" %>

@@ -1,16 +1,16 @@
-<div class="container text-center w-50">
-  <h2 class="text-center p-3">Modifier la période</h2>
+<%= render 'kath/admin/navbar_admin' %>
 
-  <%= form_with(model: [:kath, @period], local: true) do |f| %>
+<div class="container text-center">
+  <h2 class="p-3">Modifier la période</h2>
+
+  <%= form_with(model: [:kath, @period], local: true, class:"d-flex justify-content-center") do |f| %>
 
     <div class="form-group">
-      <%= f.label :title %>
+      <%= f.label :titre_de_la_période %>
       <%= f.text_field :title, class: 'form-control' %>
 
       <%= f.submit "Modifier la période", class: " mt-2 btn btn-success" %>
 
   <% end %>
+  <%= link_to "Supprimer cette période", kath_period_path(@period.id), class: "mt-2 mx-2 btn btn-outline-danger", method: :delete, data: {confirm: "T'es sûr ? Toutes les semaine seront aussi supprimées !"} %>
 </div>
-
-<%= link_to "Supprimer cette période", kath_period_path(@period.id), class: "mx-2 text-danger btn btn-outline-danger", method: :delete, data: {confirm: "T'es sûr ? Toutes les semaine seront aussi supprimées !"} %>
-<%= link_to "Accueil admin", kath_root_path, class: "btn btn-info" %>

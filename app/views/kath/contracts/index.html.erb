@@ -1,5 +1,33 @@
-<% @contracts.each do |c| %>
-  <%= c.first_name %>
-  <%= link_to "voir le contrat", kath_contract_path(c.id, format: :pdf), class:"btn btn-info" %>
-<% end %>
-<%= link_to "Accueil", kath_root_path, class:"btn btn-warning" %>
+<%= render 'kath/admin/navbar_admin' %>
+<div class="container">
+  <h2 class="text-center mt-2">Liste de tous les contrats</h2>
+  <table class="table text-center mt-3">
+    <thead>
+      <tr>
+        <th scope="col">Nom</th>
+        <th scope="col">Prénom</th>
+        <th scope="col">Email</th>
+        <th scope="col">Séjour</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @contracts.each do |c| %>
+        <tr>
+          <th class="align-middle"><%= c.last_name.upcase %></th>
+          <td class="align-middle"><%= c.first_name.capitalize %></td>
+          <td class="align-middle"><%= c.email %></td>
+          <td class="align-middle"><%= c.duration %></td>
+          <td class="align-middle">
+            <%= link_to kath_contract_path(c.id, format: :pdf), class:"mx-2 text-info", title:"Voir le contrat" do %>
+              <i class="far fa-eye fa-2x"></i>
+            <% end %>
+            <%= link_to kath_contract_path(c.id), class: "mx-2 text-danger", title:"Supprimer le contrat", method: :delete, remote: true, data: {confirm: "Es-tu sûre de vouloir supprimer ce contrat ?"}  do %>
+              <i class="fas fa-times fa-2x"></i>
+            <% end %>
+          </td>
+        </tr>
+      </tbody>
+    <% end %>
+  </table>
+</div>

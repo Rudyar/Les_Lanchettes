@@ -10,7 +10,7 @@ class Kath::AvailabilitiesController < ApplicationController
   
   def create
     @availability = Availability.new(availability_params)
-    @availability.available = false
+    @availability.available = true
 
     if @availability.save
       flash[:success] = "Semaine créée"

@@ -1,20 +1,21 @@
 <% @availabilities.each do |availability|%>
   <tbody>
     <tr>
-      <td><%= availability.date.strftime('%d/%m/%Y') %></td>
-      <td><%= availability.price %> €</span></td>
+      <td class="align-middle"><%= availability.date.strftime('%d/%m/%Y') %></td>
+      <td class="align-middle"><%= availability.price %> €</span></td>
       <% if availability.available == true %>
-        <td><%= link_to "Oui", kath_availabilities_toggle_availability_state_path(id: availability.id), method: 'post', class: 'btn btn-success', id: availability.id, remote: true %></td>
+        <td class="align-middle"><%= link_to "Oui", kath_availabilities_toggle_availability_state_path(id: availability.id), method: 'post', class: 'btn btn-success', id: availability.id, remote: true %></td>
       <% else %>
-        <td><%= link_to "Non", kath_availabilities_toggle_availability_state_path(id: availability.id), method: 'post', class: 'btn btn-danger', id: availability.id, remote: true %></td>
+        <td class="align-middle"><%= link_to "Non", kath_availabilities_toggle_availability_state_path(id: availability.id), method: 'post', class: 'btn btn-danger', id: availability.id, remote: true %></td>
       <% end %>
-      <td>
+      <td class="align-middle">
         <%= link_to edit_kath_availability_path(availability.id), title: "Modifier la semaine", class: "text-secondary" do %>
           <i class="fas fa-2x fa-pencil-alt mx-1"></i></h3>
         <% end %>
         <%= link_to kath_availability_path(availability.id), class: "mx-2 text-danger", title:"Supprimer la semaine", method: :delete, remote: true, data: {confirm: "Es-tu sûr(e) de vouloir supprimer cette semaine ?"}  do %>
           <i class="fas fa-times fa-2x"></i>
-        <% end %></td>
+        <% end %>
+      </td>
     </tr>
   </tbody>
 

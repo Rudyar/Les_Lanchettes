@@ -2,7 +2,7 @@ class Kath::ContractsController < ApplicationController
   before_action :authenticate_user
 
   def index
-    @contracts =Contract.all
+    @contracts =Contract.all.reverse
   end
 
   def new
@@ -31,6 +31,17 @@ class Kath::ContractsController < ApplicationController
       end
     end
 
+  end
+
+  def destroy
+    @contract = Contract.find(params[:id])
+    if @contract.destroy
+      flash[:info] = "Contrat supprimé"
+      redirect_to kath_contracts_path
+    else
+      flash[:danger] = "Impossible de supprimer ce contrat"
+      redirect_to kath_contracts_path
+    end
   end
 
   private

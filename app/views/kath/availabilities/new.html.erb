@@ -1,21 +1,21 @@
-<div class="container text-center w-50">
-  <h2 class="text-center p-3">Ajouter une nouvelle semaine de disponibilité</h2>
+<%= render 'kath/admin/navbar_admin' %>
 
-  <%= form_with(model: [:kath, @availability], local: true) do |f| %>
+<div class="container text-center">
+  <h2 class="p-3">Ajouter une nouvelle semaine de disponibilité</h2>
 
-    <div class="form-group">
+  <%= form_with(model: [:kath, @availability], local: true, class:"d-flex justify-content-center") do |f| %>
+
+    <div class="form-group w-50">
       <%= f.label :date_de_début_de_semaine %>
       <%= f.date_field :date, class: "form-control" %>
       
-      <%= f.label :prix_de_la_semaine %>
-      <%= f.number_field :price, min: 1, step: 1, class: "form-control" %>
+      <%= f.label :prix_de_la_semaine, class:"pt-2" %>
+      <%= f.number_field :price, min: 1, step: 1, placeholder:"300", class: "form-control" %>
 
-      <%= f.label :periode_concernée %>
+      <%= f.label :periode_concernée, class:"pt-3" %>
       <%= f.collection_select :period_id, Period.all, :id, :title, class:"form-control" %>
-
-      <%= f.submit "Ajouter une nouvelle semaine", class: " mt-2 btn btn-success" %>
+      <br>
+      <%= f.submit "Ajouter une nouvelle semaine", class: "btn btn-success mt-3" %>
 
   <% end %>
 </div>
-
-<%= link_to "Accueil admin", kath_root_path, class: "btn btn-info" %>

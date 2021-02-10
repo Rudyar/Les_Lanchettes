@@ -1,4 +1,4 @@
-<% @availabilities.each do |availability|%>
+<% @availabilities.order("date").each do |availability|%>
   <tbody>
     <tr>
       <td class="align-middle"><%= availability.date.strftime('%d/%m/%Y') %></td>

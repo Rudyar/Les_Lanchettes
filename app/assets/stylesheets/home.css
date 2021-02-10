@@ -68,3 +68,7 @@ thead>tr>th {
   position:absolute;
   align-items: center;
   }
+
+#btn-availabilities:hover {
+  cursor: text;
+}

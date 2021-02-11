@@ -61,3 +61,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'table_print'
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
+gem 'mailjet'
+gem 'dotenv-rails'

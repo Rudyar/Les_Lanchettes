@@ -10,7 +10,7 @@
 
 body {
   background-color:#EEEFEF;
-  font-family: roboto, open sans;
+  font-family: roboto, open sans-serif;
   color: rgb(69,69,69);
 	-webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -71,4 +71,147 @@ thead>tr>th {
 
 #btn-availabilities:hover {
   cursor: text;
+}
+
+/* Contact form */
+#contact {
+  width: 100%;
+  height: 100vh;
+  background-color: #940c0c;
+  overflow: hidden;
+  /*padding-bottom: 200px;*/
+}
+
+.section-header {
+  text-align: center;
+  margin: 0 auto;
+  padding: 40px 0;
+  font: 300 60px 'Oswald', sans-serif;
+  letter-spacing: 6px;
+  color: antiquewhite;
+}
+
+.contact-wrapper {
+  margin: 0 auto;
+  padding-top: 20px;
+  position: relative;
+  max-width: 800px;
+}
+
+/* Begin Left Contact Page */
+.form-horizontal {
+  float: left;
+  max-width: 400px;
+  font-weight: 400;
+}
+
+.form-control, textarea {
+  max-width: 400px;
+  background-color: #000;
+  color: antiquewhite;
+  letter-spacing: 1px;
+}
+
+.send-button {
+  margin-top: 15px;
+  height: 34px;
+  width: 400px;
+  overflow: hidden;
+  transition: all .2s ease-in-out;
+}
+
+.button {
+  width: 400px;
+  height: 34px;
+  transition: all .2s ease-in-out;
+}
+
+
+/* Begin Right Contact Page */
+.direct-contact-container {
+  max-width: 400px;
+  float: right;
+  margin-top: 5px;
+}
+
+/* Location, Phone, Email Section */
+.contact-list {
+  list-style-type: none;
+  margin-left: 30px;
+  padding-right: 20px;
+}
+
+.list-item {
+  line-height: 2;
+  color: antiquewhite;
+  padding-top: 20px;
+}
+
+.contact-text {
+  font: 300 18px 'Lato', sans-serif;
+  letter-spacing: 1.9px;
+  color: antiquewhite;
+}
+
+.place {
+  margin-left: 30px;
+  
+}
+
+.phone {
+  margin-left: 30px;
+}
+
+.gmail {
+  margin-left: 30px;
+}
+
+.contact-text a {
+  color: antiquewhite;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+.contact-text a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Begin Media Queries*/
+@media screen and (max-width: 760px) {
+  .direct-contact-container, .form-horizontal {
+    float: none;
+    margin: 10px auto;
+  }  
+  .direct-contact-container {
+    margin-top: 60px;
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 569px) {
+
+  .direct-contact-container, .form-wrapper {
+    float: none;
+    margin: 0 auto;
+  }  
+  .form-control, textarea {
+    max-width: 340px;
+    margin: 0 auto;
+  }
+  
+  .name, .email, textarea {
+    width: 280px;
+  } 
+  
+  .direct-contact-container {
+    margin-top: 60px;
+    max-width: 280px;
+  }  
+}
+
+@media screen and (max-width: 410px) {
+  .send-button {
+    width: 99%;
+  }
 }

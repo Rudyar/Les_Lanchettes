@@ -1,26 +1,37 @@
-<div class="container" id="contact">
-  <h1 class="mb-5 text-center">Contact</h1>
-  <div class="row">
-    <div class="col-md-6 d-flex justify-content-center">
-    <div class="card mb-3" style="max-width: 20rem; background-color: #940c0c; color: antiquewhite;">
-        <div class="card-header">Adresse</div>
-        <div class="card-body">
-          <h4 class="card-title">Les Lanchettes</h4>
-          <p class="card-text">Côte Arbet</p>
-          <p class="card-text">73350 CHAMPAGNY en VANOISE</p>
-          <p class="card-text">Savoie, FRANCE</p>
+<section id="contact">
+  <h1 class="section-header">CONTACT</h1>
+  <div class="contact-wrapper">
+    
+    <form id="contact-form" class="form-horizontal" role="form">
+       
+      <div class="form-group">
+        <div class="col-sm-12">
+          <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
         </div>
       </div>
-    </div>
 
-    <div class="col-md-6 d-flex justify-content-center">
-      <div class="card mb-3" style="max-width: 20rem; background-color: #940c0c; color: antiquewhite;">
-        <div class="card-header">Contact</div>
-          <div class="card-body">
-          <h4 class="card-title">+33(0)6.81.55.91.35</h4>
-          <p class="card-text">leslanchettes@wanadoo.fr</p>
+      <div class="form-group">
+        <div class="col-sm-12">
+          <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
         </div>
       </div>
-    </div>
+
+      <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
+      
+      <button class="btn btn-primary send-button text-center" id="submit" type="submit">
+        <div class="button">
+          <i class="fa fa-paper-plane"></i>
+        </div>
+      </button>
+    </form>
+       
+      <div class="direct-contact-container">
+        <ul class="contact-list">
+          <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">Les Lanchettes, Côte Arbet, 73350 Champagny en Vanoise</span></i></li>
+          <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:1-212-555-5555" title="Appelez-moi">+33(0)681559135</a></span></i></li>
+          <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:#" title="Send me an email">leslanchettes@wanadoo.fr</a></span></i></li>
+        </ul>
+      </div>
   </div>
-</div>
+</section>
+  

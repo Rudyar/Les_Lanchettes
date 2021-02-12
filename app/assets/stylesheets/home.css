@@ -2,13 +2,40 @@
 
 }
 
+#welcome-section {
+  width: 100%;
+
+}
+
 body {
   background-color:#EEEFEF;
-  font-family: roboto, open sans-serif;
   color: rgb(69,69,69);
-	-webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+}
+
+.title {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+#g2f-logo {
+  height: 125px;
+  width: 125px;
+}
+
+#g2f-title {
+  width: 150px;
+  height: auto;
+}
+
+#pnv-logo {
+  height: 125px;
+  width: auto;
+}
+
+#logo-champ {
+  height: 135px;
+  width: auto;
 }
 
 .washing-machine {

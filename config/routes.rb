@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'home#index'
 
   resources :sessions, only: [:new, :create, :destroy]
+  resources :contacts, only: [:create]
 
 
   # Admin (admin pannle is called Kath, it's easy for my mother to understand :) )

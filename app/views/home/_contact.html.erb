@@ -1,29 +1,29 @@
 <section id="contact">
   <h1 class="section-header">CONTACT</h1>
   <div class="contact-wrapper">
-    
-    <form id="contact-form" class="form-horizontal" role="form">
-       
+    <%= form_with(url: contacts_path, local: true, class:"form-horizontal", id:"contact-form") do |f| %>
+
       <div class="form-group">
         <div class="col-sm-12">
-          <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
+          <%= f.text_field :name, class: 'form-control', id:"name", placeholder:"Nom & Prénom", required: true %>
         </div>
       </div>
 
       <div class="form-group">
         <div class="col-sm-12">
-          <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
+          <%= f.email_field :email, class: 'form-control', id:"email", placeholder:"Email", required: true %>
         </div>
       </div>
 
-      <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
+      <%= f.text_area :message, class: 'form-control', rows:"10", id:"message", placeholder:"Message", required: true %>
       
-      <button class="btn btn-primary send-button text-center" id="submit" type="submit">
-        <div class="button">
-          <i class="fa fa-paper-plane"></i>
-        </div>
-      </button>
-    </form>
+      <div class="button">
+      <%= button_tag type:"submit", class: "btn btn-secondary send-button text-center" do %>
+        <i class="fa fa-paper-plane"></i>
+        <% end %>
+      </div>
+
+    <% end %>
        
       <div class="direct-contact-container">
         <ul class="contact-list">

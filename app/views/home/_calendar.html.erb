@@ -1,7 +1,7 @@
 <div class="container mt-5" id="reservation">
-  <h1 class="mb-5 text-center">Disponibilité</h1>
+  <hr class="w-50">
+  <h2 class="section-header text-dark">DISPONIBILITE</h2>
   <div class="row">
-
     <% @periods.each do |period| %>
       <% @availabilities = Availability.where(period_id: period.id) %> <%# Bad practice, but it's the only solution I've found %>
       <div class="col-md-6">
@@ -22,6 +22,5 @@
         </div>
       </div>
     <% end %>
-
   </div>
 </div>

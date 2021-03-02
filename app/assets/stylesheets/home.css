@@ -13,6 +13,11 @@ body {
   overflow-x: hidden;
 }
 
+.bg-red {
+  background-color: #940c0c;
+  color: antiquewhite;
+}
+
 .title {
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -40,7 +45,8 @@ body {
 
 .washing-machine {
   width: 50px;
-  height: 50px;
+  height: 60px;
+  background-color: antiquewhite;
 }
 
 table {
@@ -92,6 +98,7 @@ thead>tr>th {
 
 #btn-availabilities:hover {
   cursor: text;
+
 }
 
 /* Contact form */

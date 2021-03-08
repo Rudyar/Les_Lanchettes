@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     
     resources :periods
     resources :availabilities
-    resources :contracts
+    resources :contracts, only: [:index, :new, :create, :show, :destroy]
 
     post "availabilities/toggle_availability_state" => "availabilities#toggle_availability_state"
   end

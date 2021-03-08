@@ -1,21 +1,21 @@
-<div class="container text-center w-50">
-  <h2 class="text-center p-3">Modifier la semaine du <%= @availability.date.strftime('%d/%m/%Y') %></h2>
+<%= render 'kath/admin/navbar_admin' %>
 
-  <%= form_with(model: [:kath, @availability], local: true) do |f| %>
+<div class="container text-center w-50">
+  <h2 class="p-3">Modifier la semaine du <%= @availability.date.strftime('%d/%m/%Y') %></h2>
+
+  <%= form_with(model: [:kath, @availability], local: true, class:"d-flex justify-content-center") do |f| %>
 
     <div class="form-group">
       <%= f.label :date_de_début_de_semaine %>
-      <%= f.date_field :date, class: "form-control" %>
+      <%= f.date_field :date, class: "form-control mb-3" %>
       
       <%= f.label :prix_de_la_semaine %>
-      <%= f.number_field :price, min: 1, step: 1, class: "form-control" %>
+      <%= f.number_field :price, min: 1, step: 1, class: "form-control mb-3" %>
 
       <%= f.label :periode_concernée %>
       <%= f.collection_select :period_id, Period.all, :id, :title, class:"form-control" %>
-
-      <%= f.submit "Modifier la semaine", class: " mt-2 btn btn-success" %>
+      <br>
+      <%= f.submit "Modifier la semaine", class: " mt-3 btn btn-success" %>
 
   <% end %>
 </div>
-
-<%= link_to "Accueil admin", kath_root_path, class: "btn btn-info" %>

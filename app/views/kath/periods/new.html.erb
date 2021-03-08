@@ -1,6 +1,6 @@
 <%= render 'kath/admin/navbar_admin' %>
 
-<div class="container text-center">
+<div class="container text-center w-50">
   <h2 class="p-3">Ajouter une nouvelle période</h2>
 
   <%= form_with(model: [:kath, @period], local: true, class:"d-flex justify-content-center") do |f| %>
@@ -13,5 +13,3 @@
 
   <% end %>
 </div>
-
-<%= link_to "Accueil admin", kath_root_path, class: "btn btn-success" %>

@@ -1,11 +1,11 @@
 <%= render 'kath/admin/navbar_admin' %>
 
-<div class="container text-center">
+<div class="container text-center w-50">
   <h2 class="p-3">Ajouter une nouvelle semaine de disponibilité</h2>
 
   <%= form_with(model: [:kath, @availability], local: true, class:"d-flex justify-content-center") do |f| %>
 
-    <div class="form-group w-50">
+    <div class="form-group">
       <%= f.label :date_de_début_de_semaine %>
       <%= f.date_field :date, class: "form-control" %>
       

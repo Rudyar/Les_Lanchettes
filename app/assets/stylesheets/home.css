@@ -86,6 +86,10 @@ body {
   width: 100%;
 }
 
+.welcome-text {
+  font-size: 18px;
+}
+
 #g2f-logo {
   height: 125px;
   width: 125px;
@@ -107,6 +111,17 @@ body {
 }
 
 /* End welcome section */
+/* Presentation section */
+
+.appartment-card{
+  transition: 200ms;
+
+}
+
+.appartment-card:hover{
+  transform: scale(1.03);
+  box-shadow: 0 0 5px black;
+}
 
 .washing-machine {
   width: 50px;
@@ -114,6 +129,8 @@ body {
   background-color: #F7F7F7;
 }
 
+
+/* End presentation section */
 /* Availabilities table */
 
 table {

@@ -170,11 +170,26 @@ thead>tr>th {
 /* End availabilities section */
 
 /* Contact form */
+
+.bg-contact {
+  background-image: url("https://cdn.pixabay.com/photo/2014/12/15/13/18/fir-trees-569047_1280.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
 #contact {
   width: 100%;
-  height: 80vh;
+  height: 0%;
   overflow: hidden;
   padding-bottom: 200px;
+}
+
+#text-muted {
+  font-size: 9px;
+  color: #F7F7F7;
+  line-height: 1;
 }
 
 .section-header {
@@ -205,20 +220,19 @@ thead>tr>th {
   letter-spacing: 1px;
 }
 
-.send-button {
+#send-button{
   margin-top: 15px;
   height: 34px;
   width: 400px;
+  background-color: #579181;
+  color: #F7F7F7;
   overflow: hidden;
-  transition: all .2s ease-in-out;
+  transition: .3s;
 }
 
-.button {
-  width: 400px;
-  height: 34px;
-  transition: all .2s ease-in-out;
+#send-button:hover{
+  background-color:#2F4F46;
 }
-
 
 /* Begin Right Contact Page */
 .direct-contact-container {
@@ -292,7 +306,7 @@ thead>tr>th {
     margin: 0 auto;
   }  
   .form-control, textarea {
-    max-width: 340px;
+    max-width: 310px;
     margin: 0 auto;
   }
   
@@ -307,8 +321,8 @@ thead>tr>th {
 }
 
 @media screen and (max-width: 410px) {
-  .send-button {
-    width: 99%;
+  #send-button {
+    width: 70%;
   }
 }
 

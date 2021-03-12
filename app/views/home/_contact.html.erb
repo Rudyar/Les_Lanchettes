@@ -1,5 +1,5 @@
-<section id="contact" class="bg-green">
-  <h2 class="section-header">CONTACT</h2>
+<section id="contact" class="bg-contact mt-5 pt-5">
+  <h2 class="section-header text-dark">CONTACT</h2>
   <div class="contact-wrapper">
     <%= form_with(url: contacts_path, local: true, class:"form-horizontal", id:"contact-form") do |f| %>
 
@@ -17,8 +17,8 @@
 
       <%= f.text_area :message, class: 'form-control', rows:"10", id:"message", placeholder:"Message", required: true %>
       
-      <div class="button">
-      <%= button_tag type:"submit", class: "btn btn-secondary send-button text-center" do %>
+      <div class="button text-center">
+      <%= button_tag type:"submit", class: "btn text-center", id: "send-button" do %>
         <i class="fa fa-paper-plane"></i>
         <% end %>
       </div>
@@ -30,7 +30,7 @@
         <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">Les Lanchettes, Côte Arbet, 73350 Champagny en Vanoise</span></i></li>
         <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:1-212-555-5555" title="Appelez-moi">+33(0)681559135</a></span></i></li>
         <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:#" title="Send me an email">leslanchettes@wanadoo.fr</a></span></i></li>
-        <li class="list-item"><small class="text-muted">* Les données de ce formulaire sont uniquement utilisées pour répondre à votre demande.</small></li>
+        <li class="pt-3"><small id="text-muted">* Les données de ce formulaire sont uniquement utilisées pour répondre à votre demande.</small></li>
       </ul>
     </div>
   </div>

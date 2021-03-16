@@ -292,7 +292,7 @@ thead>tr>th {
 }
 
 /* Begin Media Queries*/
-@media screen and (max-width: 760px) {
+@media (max-width: 800px) {
   .direct-contact-container, .form-horizontal {
     float: none;
     margin: 10px auto;
@@ -303,6 +303,10 @@ thead>tr>th {
   }
   .section-header {
     font-size: 2rem;
+  }
+  .contact-list {
+    padding: 0;
+    margin: 0;
   }
 }
 
@@ -331,6 +335,9 @@ thead>tr>th {
   #send-button {
     width: 70%;
   }
+  .gmail {
+    font-size: 16px;
+  }
 }
 
 /* Map */
@@ -356,3 +363,7 @@ thead>tr>th {
       height: 600px;
     }
   }
+
+#top {
+  color: #579181;
+}

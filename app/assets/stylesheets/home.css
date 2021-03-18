@@ -29,7 +29,7 @@ body {
 
 .call-to-action{
   position: absolute;
-  bottom: 30%;
+  bottom: 40%;
   left: 0; 
   right: 0; 
   margin-left: auto; 
@@ -37,8 +37,22 @@ body {
   align-items: center;
   text-align: center;
   z-index: 99;
-  color: #F7F7F7;
+  color: lightgrey;
 }
+
+.title-jumbo {
+  font-family: 'Parisienne', cursive;
+}
+
+.title-jumbo h1{
+  font-size: 4rem;
+  
+}
+
+.hr-jumbo {
+  background-color: #DE6947 !important;
+}
+
 
 @media (max-width: 650px) {
   .title-jumbo {
@@ -46,8 +60,13 @@ body {
   }
 }
 
+.btn-jumbo {
+
+
+}
+
 #btn-reservation {
-  font-size: 1rem;
+  font-size: 1.2rem;
   background-color: #DE6947;
   color: #F7F7F7;
 }
@@ -61,7 +80,7 @@ body {
   border: 2px solid #DE6947;
   background-color: transparent;
   color: #F7F7F7;
-  font-size: 1rem;
+  font-size: 1.2rem;
   cursor: pointer;
 }
 

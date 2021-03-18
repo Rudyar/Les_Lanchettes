@@ -1,5 +1,5 @@
 <section id="jumbo">
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -7,15 +7,21 @@
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <%= image_tag "home/jumbo.jpg", class:"w-100" %>
+        <%= image_tag "home/jardin.jpg", class:"w-100" %>
       </div>
+
       <div class="carousel-item">
         <%= image_tag "home/jumbo.jpg", class:"w-100" %>
       </div>
+
       <div class="carousel-item">
-        <%= image_tag "home/VueSalon.jpg", class:"w-100" %>
+        <%= image_tag "home/glière.jpg", class:"w-100" %>
+        <div class="carousel-caption">
+          <a class="btn btn-success" href="#availabilities">Réserver !</a>
+        </div>
       </div>
     </div>
+
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     </a>

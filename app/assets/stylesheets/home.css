@@ -27,9 +27,13 @@ body {
   }
 }
 
+.jumbo-1 {
+  opacity: 0.9;
+}
+
 .call-to-action{
   position: absolute;
-  bottom: 40%;
+  bottom: 25%;
   left: 0; 
   right: 0; 
   margin-left: auto; 
@@ -41,12 +45,18 @@ body {
 }
 
 .title-jumbo {
-  font-family: 'Parisienne', cursive;
+  color: #000B17;
 }
 
 .title-jumbo h1{
-  font-size: 4rem;
+  font-family: 'parisienne', cursive;
+  font-size: 4.5rem;
   
+}
+
+.title-jumbo h2{
+  font-size: 2.5rem;
+  font-weight: normal;
 }
 
 .hr-jumbo {
@@ -62,30 +72,42 @@ body {
 
 .btn-jumbo {
 
-
 }
 
 #btn-reservation {
   font-size: 1.2rem;
   background-color: #DE6947;
   color: #F7F7F7;
+  padding: 1%;
 }
 
 #btn-reservation:hover {
   background-color: #823D2A;
-
+  
 }
 
 #btn-call {
   border: 2px solid #DE6947;
-  background-color: transparent;
+  background: rgba(222, 105, 71, 0.5);
   color: #F7F7F7;
   font-size: 1.2rem;
   cursor: pointer;
+  padding: 1%;
 }
 
 #btn-call:hover {
   background-color: #DE6947;
+}
+
+@media (max-width: 850px) {
+  #btn-reservation {
+    font-size: 0.6rem !important;
+    padding: 2% !important;
+  }  
+  #btn-call {
+    font-size: 0.6rem !important;
+    padding: 2% !important;
+  }
 }
 
 /* Navbar */
@@ -195,18 +217,19 @@ body {
   box-shadow: 0 0 5px black;
 }
 
-.washing-machine {
-  width: 50px;
-  height: 65px;
-  background-color: #F7F7F7;
-}
-
-.oven {
+/* Icons equipments */
+.icon-oven {
   width: 55px;
   height: 65px;
   background-color: #F7F7F7;
 }
 
+.icon {
+  height: 65px;
+  width: auto;
+  background-color: #F7F7F7;
+}
+/* End icons equipments */
 
 /* End presentation section */
 /* Availabilities table */
@@ -254,7 +277,6 @@ thead>tr>th {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-
 }
 
 #contact {
@@ -280,7 +302,7 @@ thead>tr>th {
 
 .contact-wrapper {
   margin: 0 auto;
-  padding-top: 20px;
+  padding-top: 40px;
   position: relative;
   max-width: 800px;
 }

@@ -27,8 +27,8 @@ body {
   }
 }
 
-.jumbo-1 {
-  opacity: 0.9;
+.carousel-item {
+  filter: brightness(50%);
 }
 
 .call-to-action{
@@ -45,7 +45,7 @@ body {
 }
 
 .title-jumbo {
-  color: #000B17;
+  color: #f7f7f7;
 }
 
 .title-jumbo h1{
@@ -84,7 +84,6 @@ body {
 
 #btn-call {
   border: 2px solid #DE6947;
-  background: rgba(222, 105, 71, 0.5);
   color: #F7F7F7;
   font-size: 1.2rem;
   cursor: pointer;

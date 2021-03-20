@@ -12,4 +12,5 @@
  *
  *= require home
  *= require contracts
+ *= require kath/home_admin
  */
